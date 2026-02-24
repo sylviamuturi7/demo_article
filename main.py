@@ -35,6 +35,8 @@ def main():
                     print(f"{idx}: {t['title']} - {status}")
                 try:
                     index = int(input("Enter the index of the task to mark complete: "))
+                    # Convert user-friendly 1-based input to 0-based index
+                    index = index - 1
                 except ValueError:
                     print("Error: Please enter a valid integer index.")
                 else:
